@@ -108,3 +108,4 @@ Quit the server with CTRL-BREAK.
 
 ```
 You'll be able to access the default site at **localhost:8000** or **127.0.0.1:8000**
+![Image of Yaktocat](1.png)
