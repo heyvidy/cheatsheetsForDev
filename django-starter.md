@@ -59,11 +59,11 @@ When you pip freeze to a requirements.txt file, pip saves all the dependencies i
 
 #### 8. Create a Database instance (empty)
 ```terminal
-(your_environment_name) /your_project_name/ $ python manage.py makemigrations
+(your_environment_name) your_project_name/ $ python manage.py makemigrations
 No changes detected
 
 
-(your_environment_name) /your_project_name/ $ python manage.py migrate
+(your_environment_name) your_project_name/ $ python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
 Running migrations:
@@ -82,6 +82,29 @@ Running migrations:
   Applying sessions.0001_initial... OK
 ```
 
-```python
-print(Hello)
+#### 9. Create a superuser -- admin for your project to access all project data.
 ```
+(your_environment_name) your_project_name/ $ python manage.py createsuperuser
+
+Username (leave blank to use 'vd'): admin
+Email address: <youremail>
+Password:
+Password (again):
+Superuser created successfully.
+```
+Password will not be shown as you type on the screen, not even * to indicate the characters. So please note that you have keep track of your characters as you type. It's just invisible.
+
+#### 10. Run the server
+```
+(your_environment_name) your_project_name/ $ python manage.py runserver
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 03, 2018 - 15:53:04
+Django version 1.11, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+```
+You'll be able to access the default site at **localhost:8000** or **127.0.0.1:8000**
