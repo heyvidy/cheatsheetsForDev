@@ -20,7 +20,7 @@ dir_path\your_environment_name> $ Scripts\activate
 
 ### 4. Install Django 1.12 in the Virtual Environment
 ```
-$ pip install django==1.12
+$ pip install django==1.11
 ```
 
 ### 5. Start a Django Project
