@@ -42,8 +42,28 @@ dir_path\your_environment_name> $ Scripts\activate
       |-- wsgi.py
       |-- __init__.py
  ```
+ 
+ 
+#### 7. Run the server
+```
+(your_environment_name) your_project_name/ $ python manage.py runserver
 
-#### 7. Freeze requirements.txt to keep track of dependencies
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 03, 2018 - 15:53:04
+Django version 1.11, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+```
+You'll be able to access the default site at **localhost:8000** or **127.0.0.1:8000**
+
+![Django Starter Screen](1.png)
+
+If you see this, you've successfully set up a django project and run the server.
+
+#### 8. Freeze requirements.txt to keep track of dependencies
 ```
 (your_environment_name) $ pip freeze >requirements.txt
 (your_environment_name) $ dir
@@ -57,7 +77,7 @@ pytz==2018.3
 ```
 When you pip freeze to a requirements.txt file, pip saves all the dependencies in the file which can be used to later to install dependencies on the server.
 
-#### 8. Create a Database instance (empty)
+#### 9. Create a Database instance (empty)
 ```terminal
 (your_environment_name) your_project_name/ $ python manage.py makemigrations
 No changes detected
@@ -82,7 +102,7 @@ Running migrations:
   Applying sessions.0001_initial... OK
 ```
 
-#### 9. Create a superuser -- admin for your project to access all project data.
+#### 10. Create a superuser -- admin for your project to access all project data.
 ```
 (your_environment_name) your_project_name/ $ python manage.py createsuperuser
 
@@ -94,18 +114,27 @@ Superuser created successfully.
 ```
 Password will not be shown as you type on the screen, not even * to indicate the characters. So please note that you have keep track of your characters as you type. It's just invisible.
 
-#### 10. Run the server
+#### 11. Create a Django App
 ```
-(your_environment_name) your_project_name/ $ python manage.py runserver
-
-Performing system checks...
-
-System check identified no issues (0 silenced).
-March 03, 2018 - 15:53:04
-Django version 1.11, using settings 'myproject.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.
-
+(your_environment_name) your_project_name/ $ python manage.py startapp weblog 
 ```
-You'll be able to access the default site at **localhost:8000** or **127.0.0.1:8000**
-![Image of Yaktocat](1.png)
+You can name the app anything you want. **weblog** in this case is my choice as I'm building a simple weblog.
+
+#### 12. Explore the project directory
+```
+(your_environment_name) your_project_name/ $ cd weblog 
+(your_environment_name) your_project_name/weblog/ $ dir 
+|-- manage.py
+|-- myproject/
+|-- requirements.txt
+|-- weblog/
+      |-- admin.py
+      |-- apps.py
+      |-- models.py
+      |-- tests.py
+      |-- views.py
+      |-- __init__.py
+      |-- migrations/
+      
+```
+
