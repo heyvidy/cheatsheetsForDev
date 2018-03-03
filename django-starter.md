@@ -1,4 +1,7 @@
 # Django Starter
+
+I assume you're working in Command Prompt on a windows machine. **$** indicates the prompt path.
+
 It's a good practice to create a virtual environment before you work on your project. 
 
 #### 1. Install Virtualenv
@@ -20,18 +23,18 @@ dir_path\your_environment_name> $ Scripts\activate
 
 #### 4. Install Django 1.11 in the Virtual Environment
 ```
-$ pip install django==1.11
+(your_environment_name) $ pip install django==1.11
 ```
 
 #### 5. Start a Django Project
 ```
-$ django-admin startproject your_project_name
+(your_environment_name) $ django-admin startproject your_project_name
 ```
 
 #### 6. Navigate to project folder
 ```
-$ cd your_project_name
-$ dir
+(your_environment_name) $ cd your_project_name
+(your_environment_name) $ dir
 |-- manage.py
 |-- myproject/
       |-- settings.py
@@ -39,3 +42,17 @@ $ dir
       |-- wsgi.py
       |-- __init__.py
  ```
+
+#### 7. Freeze requirements.txt to keep track of dependencies
+```
+(your_environment_name) $ pip freeze >requirements.txt
+(your_environment_name) $ dir
+|-- manage.py
+|-- myproject/
+|-- requirements.txt
+
+(your_environment_name) $ more requirements.txt
+Django==1.11
+pytz==2018.3
+```
+
