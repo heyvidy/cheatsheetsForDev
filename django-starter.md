@@ -58,7 +58,7 @@ pytz==2018.3
 When you pip freeze to a requirements.txt file, pip saves all the dependencies in the file which can be used to later to install dependencies on the server.
 
 #### 8. Create a Database instance (empty)
-```command
+```terminal
 (your_environment_name) /your_project_name/ $ python manage.py makemigrations
 No changes detected
 
@@ -80,4 +80,8 @@ Running migrations:
   Applying auth.0007_alter_validators_add_error_messages... OK
   Applying auth.0008_alter_user_username_max_length... OK
   Applying sessions.0001_initial... OK
+```
+
+```python
+print(Hello)
 ```
